@@ -1,0 +1,2 @@
+# gemina
+proyecto en Django
