@@ -14,6 +14,9 @@ class Tienda(models.Model):
     correo = models.EmailField(default=None, null=True, blank=True)
     website = models.URLField() 
     antiguedad = models.DateTimeField(default=datetime.now, blank=True)
+
+    def _unicode_(self):
+    	return self.nombre
  
 class Empleado(models.Model): 
     nombre = models.CharField(max_length=30) 

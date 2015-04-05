@@ -6,14 +6,17 @@ from datetime import datetime
 class Tienda(models.Model): 
     nombre = models.CharField(max_length=30) 
     direccion = models.CharField(max_length=50) 
-    poblacion = models.CharField(max_length=60) 
-    provincia = models.CharField(max_length=20) 
+    poblacion = models.CharField(max_length=60,default=None, null=True, blank=True) 
+    provincia = models.CharField(max_length=20,default=None, null=True, blank=True) 
     pais = models.CharField(max_length=20) 
     telefono =  models.PositiveIntegerField(null=True, blank=True)
     fax = models.PositiveIntegerField(null=True, blank=True) 
     correo = models.EmailField(default=None, null=True, blank=True)
     website = models.URLField() 
     antiguedad = models.DateTimeField(default=datetime.now, blank=True)
+
+    def _unicode_(self):
+    return self.nombre
  
 class Empleado(models.Model): 
     nombre = models.CharField(max_length=30) 
