@@ -14,9 +14,6 @@ class Tienda(models.Model):
     correo = models.EmailField(default=None, null=True, blank=True)
     website = models.URLField() 
     antiguedad = models.DateTimeField(default=datetime.now, blank=True)
-
-    def _unicode_(self):
-    	return self.nombre
  
 class Empleado(models.Model): 
     nombre = models.CharField(max_length=30) 
@@ -33,7 +30,7 @@ class Empleado(models.Model):
 class Articulo(models.Model): 
     nombre = models.CharField(max_length=50) 
     familia = models.CharField(max_length=50)
-    importe = models.IntegerField() 
+    importe = models.DecimalField(max_digits=10, decimal_places=2) 
     antiguedad = models.DateTimeField(default=datetime.now, blank=True)
     fotografia = models.ImageField(upload_to='imagenes')
     
