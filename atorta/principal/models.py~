@@ -14,9 +14,10 @@ class Tienda(models.Model):
     correo = models.EmailField(default=None, null=True, blank=True)
     website = models.URLField() 
     antiguedad = models.DateTimeField(default=datetime.now, blank=True)
-
-    def _unicode_(self):
-    return self.nombre
+    
+    def __unicode__(self):
+    	return self.nombre
+ 
  
 class Empleado(models.Model): 
     nombre = models.CharField(max_length=30) 
@@ -29,13 +30,21 @@ class Empleado(models.Model):
     correo = models.EmailField() 
     tienda = models.ForeignKey(Tienda, default=None, null=True, blank=True)
     antiguedad = models.DateTimeField(default=datetime.now, blank=True)
+    
+    def __unicode__(self):
+    	return self.nombre
+ 
 
 class Articulo(models.Model): 
     nombre = models.CharField(max_length=50) 
     familia = models.CharField(max_length=50)
-    importe = models.IntegerField() 
+    importe = models.DecimalField(max_digits=10, decimal_places=2) 
     antiguedad = models.DateTimeField(default=datetime.now, blank=True)
     fotografia = models.ImageField(upload_to='imagenes')
+    
+    def __unicode__(self):
+    	return self.nombre
+ 
     
 class Cliente(models.Model): 
     nombre = models.CharField(max_length=30) 
@@ -50,6 +59,10 @@ class Cliente(models.Model):
     importe = models.IntegerField()
     antiguedad = models.DateTimeField(default=datetime.now, blank=True)
     ultimo_pedido = models.DateTimeField(default=datetime.now, blank=True)
+    
+    def __unicode__(self):
+    	return self.nombre
+ 
 
 class Pedido_cabecera(models.Model): 
     tienda = models.CharField(max_length=10) 
