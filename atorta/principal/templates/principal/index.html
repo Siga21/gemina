@@ -1,8 +1,12 @@
+{% extends "base.html" %}
 {%   load   staticfiles   %}  
 
+{% block elcss %}
 <link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/style.css'   %}"   />
+{% endblock %}
 
-<div id="contenedor">
+{% block content %}
+
 {% if los_articulos %}
 	{% for Articulo in los_articulos %}
 		<div id="box_articulo">
@@ -21,4 +25,4 @@
 	<p>no hay Articulos</p>
 {% endif %}		
 
-</div>
+{% endblock %}

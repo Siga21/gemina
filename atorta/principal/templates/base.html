@@ -1,0 +1,23 @@
+{%   load   staticfiles   %}  
+<!html>
+<html>
+<head>
+<link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/base.css'   %}"   />
+{%block elcss %}{% endblock %}
+</head>
+<body>
+	<div id="cabecera">
+		<div id="banner">
+			<div id="banner_imagen">
+				<img src="{%static 'principal/imagenes/logo.png' %}">
+			</div>	
+			<div id="banner_titulo">
+				<spam>Proyecto Gemina</spam>
+			</div>	
+		</div>	
+	</div>
+	<div id="cuerpo">
+	{% block content %} {% endblock %}
+	</div>
+</body>
+</html>	
