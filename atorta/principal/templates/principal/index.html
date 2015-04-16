@@ -1,23 +1,24 @@
-
 {%   load   staticfiles   %}  
 
 <link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/style.css'   %}"   />
 
+<div id="contenedor">
 {% if los_articulos %}
-	<table>
-	<th>Nombre</th>
-	<th>Familia</th>
-	<th>Antiguedad</th>
-	<th>Importe</th>
 	{% for Articulo in los_articulos %}
-		<tr>
-			<td width='250' align='left' style='background-color:#e9e9e9'>{{ Articulo.nombre }}</td>
-			<td class= "familia">{{ Articulo.familia }}</td>			
-			<td width='400' align='center'>{{ Articulo.antiguedad }}</td>
-			<td width='20' align='center'>{{ Articulo.importe }}</td>			
-		</tr>
+		<div id="box_articulo">
+			<div id="box_imagen">
+				<img src="{{MEDIA_URL}}{{Articulo.fotografia}}" >
+			</div>
+			<div id="box_detalle">
+				<p class="texto_importante">{{ Articulo.nombre }}</p>
+				<p class="texto_normal">Familia : {{ Articulo.familia }}</p>			
+				<p class="texto_normal">Fecha : {{ Articulo.antiguedad }}</p>
+				<p class="texto_importante">P.V.P. : {{ Articulo.importe }} €</p>			
+			</div>	
+		</div>
 	{% endfor %}
-	</table>
 {% else %}
 	<p>no hay Articulos</p>
 {% endif %}		
+
+</div>

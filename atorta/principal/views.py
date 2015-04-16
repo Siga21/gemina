@@ -8,3 +8,4 @@ def portada(request):
 	los_articulos = Articulo.objects.all()
 	context = {'los_articulos': los_articulos }
 	return render(request, 'principal/index.html', context)
+	
