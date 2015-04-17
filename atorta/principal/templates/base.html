@@ -6,6 +6,7 @@
 {%block elcss %}{% endblock %}
 </head>
 <body>
+	<!-- cabecera -- banner -->
 	<div id="cabecera">
 		<div id="banner">
 			<div id="banner_imagen">
@@ -16,8 +17,32 @@
 			</div>	
 		</div>	
 	</div>
+	<!-- navegador -->
+	<div id="tiranav">
+		<div id="navegador">
+			<ul>
+				<li><a href='#'>Inicio</a></li>
+				<li><a href='#'>T.P.V.</a></li>
+				<li><a href='#'>Pedidos</a></li>
+				<li><a href='#'>Consultas</a></li>
+				<li><a href='#'>Tiendas</a></li>
+			</ul>	
+		</div>
+	</div>
+	<!--  cuerpo -- contenido -->
 	<div id="cuerpo">
 	{% block content %} {% endblock %}
+	</div>
+	<!--  footer -->
+	<div id="tirafooter">
+		<div id="footer">
+			<div id="footer_social">
+				<a href="http://www.google.es"><img src="{%static 'principal/imagenes/GooglePlus.png' %}"></a><br />
+				<a href="http://www.twitter.com"><img src="{%static 'principal/imagenes/Twitter.png' %}"></a><br />
+				<a href="http://www.facebook.com"><img src="{%static 'principal/imagenes/Facebook.png' %}"></a><br />
+				<a href="mailto:siga21@gmail.com"><img src="{%static 'principal/imagenes/Email.png' %}"></a><br />
+			</div>
+		</div>
 	</div>
 </body>
 </html>	

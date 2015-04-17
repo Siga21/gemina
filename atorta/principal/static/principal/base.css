@@ -7,12 +7,13 @@ body
 	background-color : #fff;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+/* la parte de cabecera--Banner */
 #cabecera
 {
 	width : 100%;
 	height: 75px;
 	background-color: #DD4814;
-	margin-bottom: 25px;
 }
 #banner
 {
@@ -40,6 +41,48 @@ body
 	font-size: 60px;
 	text-shadow: 2px 2px #a9a9a9;
 }	
+/*---  barra de navegacion   ---*/
+#tiranav
+{
+	width : 100%;
+	height: 40px;
+	background-color: #EFEFEF;
+	margin-bottom: 25px;
+}
+#navegador
+{
+	width: 1000px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#navegador ul
+{
+	text-indent: 0px;
+   padding: 6px 0;
+   margin: 0;
+   text-align: left; 
+}	
+#navegador ul li
+{
+	display: inline;
+   font-size: 20px;
+   padding-right: 20px;
+   padding-left: 20px;
+   text-decoration: none;
+}
+#navegador ul li a
+{
+	text-decoration: none;
+	color: #999;
+}	
+#navegador ul li a:hover
+{
+	background-color: #aaa;
+	color: #fff;
+}	
+/*--------   contenido  -------*/
 #contenedor
 {
 	width: 1000px;
@@ -47,4 +90,35 @@ body
 	margin-right: auto;
 	margin-bottom: 25px;
 }
+/*--- footer ---*/
+#tirafooter
+{
+	width : 100%;
+	height: 250px;
+	background-color: #EFEFEF;
+	border-top : 1px solid #E0E0E0;
+	margin-top: 25px;	
+	margin-bottom: 0px;
+}	
+#footer
+{
+	width: 1000px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#footer_social
+{
+	position: relative;
+	float: left;
+	width: 75px;
+	height: 220px;
+	margin-top: 15px;
+	border-right: 1px solid #E0E0E0;
+}	
+#footer_social img
+{
+	margin-bottom: 8px;
+}
+
 
