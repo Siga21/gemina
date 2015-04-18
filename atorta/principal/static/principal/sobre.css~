@@ -1,0 +1,43 @@
+#box_articulo
+{
+	width: 700px;
+	height: 	180px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #e3e3e3;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: 4px 4px #e0e0e0;
+}	
+
+#box_imagen
+{
+	position: relative;
+	float:left;
+	width: 150px;
+	height: 180px;
+	border-right: 1px solid #e3e3e3;
+}	
+
+#box_detalle
+{
+	position: relative;
+	float:left;
+	margin-left: 20px;
+	width: 500px;
+	height: 180px;
+}
+
+.texto_importante
+{
+	color: #FB5000;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 0px;
+}	
+.texto_normal
+{
+	color: #000;
+	font-size: 12px;
+	margin-bottom: 0px;
+}
