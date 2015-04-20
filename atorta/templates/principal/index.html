@@ -11,7 +11,7 @@
 	{% for Articulo in los_articulos %}
 		<div id="box_articulo">
 			<div id="box_imagen">
-				<img src="{{Articulo.fotografia}}" >
+				<img src="{{ Articulo.fotografia.url }}" >
 			</div>
 			<div id="box_detalle">
 				<p class="texto_importante">{{ Articulo.nombre }}</p>
