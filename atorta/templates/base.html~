@@ -2,7 +2,7 @@
 <!html>
 <html>
 <head>
-<link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/base.css'   %}"   />
+<link   rel="stylesheet"   type="text/css"   href="{%   static  'base.css'   %}"   />
 {%block elcss %}{% endblock %}
 </head>
 <body>
@@ -10,7 +10,7 @@
 	<div id="cabecera">
 		<div id="banner">
 			<div id="banner_imagen">
-				<img src="{%static 'principal/imagenes/logo.png' %}">
+				<img src="{%static 'imagenes/logo.png' %}">
 			</div>	
 			<div id="banner_titulo">
 				<spam>Proyecto Gemina</spam>
@@ -21,12 +21,12 @@
 	<div id="tiranav">
 		<div id="navegador">
 			<ul>
-				<li><a href='#'>Inicio</a></li>
+				<li><a href='/principal'>Inicio</a></li>
 				<li><a href='#'>T.P.V.</a></li>
 				<li><a href='#'>Pedidos</a></li>
 				<li><a href='#'>Consultas</a></li>
 				<li><a href='#'>Tiendas</a></li>
-				<li><a href='/principal/sobre'>Sobre</a></li>				
+				<li><a href='/sobre'>Creditos</a></li>				
 			</ul>	
 		</div>
 	</div>
@@ -38,10 +38,10 @@
 	<div id="tirafooter">
 		<div id="footer">
 			<div id="footer_social">
-				<a href="http://www.google.es"><img src="{%static 'principal/imagenes/GooglePlus.png' %}"></a><br />
-				<a href="http://www.twitter.com"><img src="{%static 'principal/imagenes/Twitter.png' %}"></a><br />
-				<a href="http://www.facebook.com"><img src="{%static 'principal/imagenes/Facebook.png' %}"></a><br />
-				<a href="mailto:siga21@gmail.com"><img src="{%static 'principal/imagenes/Email.png' %}"></a><br />
+				<a href="http://www.google.es"><img src="{%static 'imagenes/GooglePlus.png' %}"></a><br />
+				<a href="http://www.twitter.com"><img src="{%static 'imagenes/Twitter.png' %}"></a><br />
+				<a href="http://www.facebook.com"><img src="{%static 'imagenes/Facebook.png' %}"></a><br />
+				<a href="mailto:siga21@gmail.com"><img src="{%static 'imagenes/Email.png' %}"></a><br />
 			</div>
 		</div>
 	</div>

@@ -2,7 +2,7 @@
 {%   load   staticfiles   %}  
 
 {% block elcss %}
-<link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/style.css'   %}"   />
+<link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/css/style.css'   %}"   />
 {% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@
 	{% for Articulo in los_articulos %}
 		<div id="box_articulo">
 			<div id="box_imagen">
-				<img src="{{MEDIA_URL}}{{Articulo.fotografia}}" >
+				<img src="{{Articulo.fotografia}}" >
 			</div>
 			<div id="box_detalle">
 				<p class="texto_importante">{{ Articulo.nombre }}</p>
