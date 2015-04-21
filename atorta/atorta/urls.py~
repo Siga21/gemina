@@ -2,8 +2,6 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 
-if settings.DEBUG:
-    
 
 urlpatterns = patterns('',
 	url(r'^imagenes/(?P<path>.*)$', 'django.views.static.serve', {
@@ -11,7 +9,13 @@ urlpatterns = patterns('',
         }),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^principal/', 'principal.views.portada', name = 'portada'),
+    url(r'^articulo/nuevo/$' , 'principal.views.articuloform'),
     url(r'^sobre/', 'principal.views.sobre', name = 'sobre'),
 )
 
-	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    # static files (images, css, javascript, etc.)
+    urlpatterns += patterns('',
+        (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+        'document_root': settings.MEDIA_ROOT}))
+

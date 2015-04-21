@@ -9,6 +9,7 @@ urlpatterns = patterns('',
         }),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^principal/', 'principal.views.portada', name = 'portada'),
+    url(r'^articulo/nuevo/$' , 'principal.views.nuevo_articulo'),
     url(r'^sobre/', 'principal.views.sobre', name = 'sobre'),
 )
 
