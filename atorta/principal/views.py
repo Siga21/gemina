@@ -25,4 +25,4 @@ def nuevo_articulo(request):
             return HttpResponseRedirect('/principal')
     else:
         formulario = ArticuloForm()
-    return render_to_response('articuloform.html',{'formulario':formulario}, context_instance=RequestContext(request))
+    return render_to_response('principal/articuloform.html',{'formulario':formulario}, context_instance=RequestContext(request))

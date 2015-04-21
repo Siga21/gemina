@@ -111,14 +111,14 @@ body
 {
 	position: relative;
 	float: left;
-	width: 75px;
+	width: 260px;
 	height: 220px;
 	margin-top: 15px;
 	border-right: 1px solid #E0E0E0;
 }	
 #footer_social img
 {
-	margin-bottom: 8px;
+	margin-right: 10px;
 }
 
 
