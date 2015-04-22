@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%   load   staticfiles   %}  
+
+{% block elcss %}
+
+{% endblock %}
+
+{% block content %}
+
+	{% if barticulos %}
+		<ul>
+		{% for barticulos in barticulos %}
+			<li>{{ barticulos.nombre }}</li>
+		{% endfor %}	
+		</ul>
+	{% else %}
+		<spam> No hay coincidencias </spam>
+	{% endif %}
+
+{% endblock %}

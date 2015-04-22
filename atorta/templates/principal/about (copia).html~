@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{%   load   staticfiles   %}  
+
+{% block elcss %}
+<link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/css/about.css'   %}"   />
+{% endblock %}
+
+{% block content %}
+
+	<p class="texto_importante">(C) Siga XXI 2015</p><br/>
+	<p class="texto_normal">siga21@gmail.com</p>
+
+{% endblock %}

@@ -26,3 +26,14 @@ def nuevo_articulo(request):
     else:
         formulario = ArticuloForm()
     return render_to_response('principal/articuloform.html',{'formulario':formulario}, context_instance=RequestContext(request))
+    
+def buscar_articulo(request):
+	return render(request, 'principal/buscar_articulo.html')    
+
+def resultado_busqueda(request):
+	if 'q' in request.GET and request.GET['q']:
+		q = request.GET['q']
+		barticulo = Articulo.objects.filter(nombre__icontains=q)
+		return render(request, 'principal/articulos_resultados.html', {'barticulo': barticulo, 'query':q})
+	else:
+		return render(request, 'principal/buscar_articulo.html', {'error': True})

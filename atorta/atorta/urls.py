@@ -11,6 +11,8 @@ urlpatterns = patterns('',
     url(r'^principal/', 'principal.views.portada', name = 'portada'),
     url(r'^articulo/nuevo/$' , 'principal.views.nuevo_articulo'),
     url(r'^sobre/', 'principal.views.sobre', name = 'sobre'),
+    url(r'^articulo/buscar/$', 'principal.views.buscar_articulo'),
+    url(r'^articulo/resultado/$', 'principal.views.resultado_busqueda'),    
 )
 
 if settings.DEBUG:
