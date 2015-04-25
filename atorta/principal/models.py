@@ -65,8 +65,8 @@ class Cliente(models.Model):
  
 
 class Pedido_cabecera(models.Model): 
-    tienda = models.CharField(max_length=10) 
-    cliente = models.CharField(max_length=10)
+    tienda = models.ForeignKey(Tienda, default=None, null=True, blank=True)
+    cliente = models.ForeignKey(Cliente, default=None, null=True, blank=True)
     cantidad = models.CharField(max_length=100) 
     importe = models.IntegerField()
     fecha = models.DateTimeField(default=datetime.now, blank=True)

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{%   load   staticfiles   %}  
+
+{% block elcss %}
+<link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/css/about.css'   %}"   />
+<link   rel="stylesheet"   type="text/css"   href="{%   static  'principal/css/about.css'   %}"   />
+{% endblock %}
+{% block content %}
+<h1>{{bcliente.nombre}}</h1>
+	
+		<p>{{ btienda.direccion }} </p>		
+		<p>{{ bcliente.telefono }} </p>		
+		<p>{{now|date:"F j, Y"}}</p>
+		<p><script>var f = new Date();
+document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());</script></p>
+<hr />
+{% endblock %}
