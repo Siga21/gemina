@@ -7,3 +7,4 @@ from principal.models import Tienda, Empleado, Articulo , Cliente , Pedido_cabec
 class ArticuloForm(ModelForm):
 	class Meta:
 		model = Articulo
+		fields = "__all__" 
